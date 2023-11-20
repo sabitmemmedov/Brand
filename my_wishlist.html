@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart</title>
+    <script src="https://kit.fontawesome.com/1cf228bb08.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/my_wishlist.css">
+</head>
+
+<body>
+    <header>
+        <div class="nav-container">
+            <nav>
+                <div class="nav-logo">
+                    <a href="./home.html"><img src="./assets/img/logo-colored.svg" alt=""></a>
+                </div>
+
+                <div class="nav-icons">
+
+                    <div style="text-align: center;"><a href="#"><i class="fa-solid fa-user"></i>
+                            <p>Profile</p>
+                        </a></div>
+                    <div style="text-align: center;"><a href="#"><i class="fa-solid fa-message"></i>
+                            <p>Message</p>
+                        </a></div>
+                    <div style="text-align: center;"><a href="./my_wishlist.html"><i style="color: red;" class="fa-solid fa-heart"></i>
+                            <p>Orders</p>
+                        </a></div>
+                    <div style="text-align: center;"><a href="./my_cart.html"><i 
+                                class="fa-solid fa-cart-shopping"></i>
+                            <p>My Cards</p>
+                        </a></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main_bg">
+        <div class="cart-container">
+            <h1 class="cart-title">My wishlist (<span id="mycount">3</span>)</h1>
+            <div class="cart-contents">
+                <div class="cart-content_left">
+                    <div class="cart-wrapper">
+                        <div id="productOrders" class="product-orders">
+                            <div class="product-order">
+                                <div class="product-order_left">
+                                    <div class="product-img">
+                                        <div class="product-img_wrapper">
+                                            <img src="" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="product-description">
+                                        <h4>Lorem, ipsum dolor.</h4>
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                        <button type="button">Remove</button>
+                                    </div>
+                                </div>
+                                <div class="product-order_right">
+                                    <span class="product-price">$78</span>
+                                    <select name="amount" id="" class="amount">
+                                        <option value="1" selected>Qty: 1</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-content-left_button">
+                            <a href="./home.html"><button type="button" class="btn-left"><i
+                                        class="fa-solid fa-arrow-left fa-beat-fade"
+                                        style="color: #ffffff; padding-right: 6px;"></i>Back to shop</button></a>
+                            <button  onclick="removeAll()" type="button" class="btn-right">Remove all</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cart-content_right">
+                    <div class="coupon">
+                        <h5>Have a coupon?</h5>
+                        <div class="coupon-input">
+                            <input type="text">
+                            <button type="button">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="checkout">
+                        <div class="checkout-wrapper">
+                            <div class="subtotal">
+                                <span class="subtotal_text">Subtotal:</span>
+                                <span class="subtotal_mount">$1403.97</span>
+                            </div>
+                            <div class="discount">
+                                <span class="discount_text">Discount:</span>
+                                <span class="discount_mount">-$60.00</span>
+                            </div>
+                            <div class="tax">
+                                <span class="tax_text">Tax:</span>
+                                <span class="tax_mount">+$14.00</span>
+                            </div>
+                            <div class="total">
+                                <span class="total_text">Total:</span>
+                                <span class="total_mount">$1357.97</span>
+                            </div>
+
+                            <button type="submit">Checkout</button>
+
+                            <div class="debiat-carts">
+                                <img src="./assets/img/payment.png" alt="">
+                                <img src="./assets/img/payment-1.png" alt="">
+                                <img src="./assets/img/payment-2.png" alt="">
+                                <img src="./assets/img/payment-3.png" alt="">
+                                <img src="./assets/img/payment-4.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cart-badges">
+                    <div class="cart-badge">
+                        <div class="badge-icon">
+                            <i class="fa-solid fa-lock" style="color: #a3a3a3;padding:8px 7px 8px 7px;"></i>
+                        </div>
+                        <div class="badge-text">
+                            <h5>Secure Payment</h5>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </div>
+                    <div class="cart-badge">
+                        <div class="badge-icon">
+                            <i class="fa-solid fa-message" style="color: #a3a3a3;padding:8px 6px 8px 6px;"></i>
+                        </div>
+                        <div class="badge-text">
+                            <h5>Secure Payment</h5>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </div>
+                    <div class="cart-badge">
+                        <div class="badge-icon">
+                            <i class="fa-solid fa-truck" style="color: #a3a3a3;padding:8px 6px 8px 6px;"></i>
+                        </div>
+                        <div class="badge-text">
+                            <h5>Secure Payment</h5>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="saved">
+                <h3>Saved for later</h3>
+                <div id="savedCards" class="saved-cards">
+
+                </div>
+            </section>
+            <section class="imgsec">
+                <img src="./assets/img/Banner.png" alt="">
+            </section>
+
+
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="foot-menu">
+            <div class="footer-container">
+                <div class="foot-menu-content">
+                    <div class="foot-menu-content-left">
+                        <div><img src="./assets/img/nav-logo.svg" alt=""></div>
+                        <p>Best information about the company gies here but now lorem ipsum is</p>
+                        <div class="foot-menu-logos">
+                            <img src="./assets/img/facebook3.png" alt="">
+                            <img src="./assets/img/Fill 184.png" alt="">
+                            <img src="./assets/img/Fill 209.png" alt="">
+                            <img src="./assets/img/instagram3.png" alt="">
+                            <img src="./assets/img/youtube3.png" alt="">
+                        </div>
+                    </div>
+                    <div class="foot-menu-content-right-lists">
+                        <ul>
+                            <li class="liS"><strong>About</strong></li>
+                            <li>About Us</li>
+                            <li>Find store</li>
+                            <li>Catagories</li>
+                            <li>Blogs</li>
+                        </ul>
+                    </div>
+                    <div class="foot-menu-content-right-lists">
+                        <ul>
+                            <li class="liS"><strong>Partnership</strong></li>
+                            <li>About Us</li>
+                            <li>Find store</li>
+                            <li>Catagories</li>
+                            <li>Blogs</li>
+                        </ul>
+                    </div>
+                    <div class="foot-menu-content-right-lists">
+                        <ul>
+                            <li class="liS"><strong>Information</strong></li>
+                            <li>Help Center</li>
+                            <li>Money Refund</li>
+                            <li>Shipping</li>
+                            <li>Contact us</li>
+                        </ul>
+                    </div>
+                    <div class="foot-menu-content-right-lists">
+                        <ul>
+                            <li class="liS"><strong>For users</strong></li>
+                            <li>Login</li>
+                            <li>Register</li>
+                            <li>Settings</li>
+                            <li>My Orders</li>
+                        </ul>
+                    </div>
+                    <div class="foot-menu-content-right-lists">
+                        <ul>
+                            <li class="liS"><strong>Get app</strong></li>
+                            <li><img src="./assets/img/market-button.png" alt=""></li>
+                            <li><img src="./assets/img/market-buttonn.png" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="foot-commerse">
+            <div class="footer-container">
+                <div class="foot-commerse-content">
+                    <div><span>© 2023 Ecommerce. </span></div>
+                    <div style="display: flex;align-items: center;"><img src="./assets/img/eng.png" alt=""><span
+                            class="Eng">English</span><i class="fa-solid fa-angle-up"></i></div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./assets/js/my_wishlist.js"></script>
+</body>
+
+</html>
